@@ -124,7 +124,7 @@ class Job(Server):
                 logger.info("Starting job build with parameters: %s",
                             name)
             else:
-                self.server.build_job(name)
+                self.server.build_job(name, json.loads('{"delay": "0sec"}'))
                 logger.info("Starting job build without params: %s",
                             name)
 
